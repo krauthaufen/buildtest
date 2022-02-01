@@ -27,7 +27,7 @@ jobs:
         run: dotnet build -c Release buildtest.fsproj
       - name: Pack
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: dotnet aardpack buildtest.fsproj
       - name: Upload Packages
         uses: actions/upload-artifact@v2
