@@ -28,7 +28,7 @@ jobs:
       - name: Pack
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: dotnet aardpack buildtest.fsproj --notag
+        run: dotnet aardpack buildtest.fsproj
       - name: Upload Packages
         uses: actions/upload-artifact@v2
         with:
